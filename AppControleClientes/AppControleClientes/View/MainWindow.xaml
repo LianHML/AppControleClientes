@@ -1,0 +1,64 @@
+﻿<Window x:Class="AppControleClientes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:AppControleClientes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow"
+        Width="800"
+        Height="450"
+        mc:Ignorable="d">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnBuscar"
+                    Grid.Column="1"
+                    Margin="10"
+                    Click="BtnBuscar_Click"
+                    Content="Buscar" />
+        </Grid>
+        <DataGrid x:Name="DtgClientes"
+                  Grid.Row="1"
+                  Margin="10"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="60"
+                                    Binding="{Binding Id}"
+                                    Header="ID" />
+                <DataGridTextColumn Width="60"
+                                    Binding="{Binding Nome}"
+                                    Header="NOME" />
+                <DataGridTextColumn Width="60"
+                                    Binding="{Binding Empresa}"
+                                    Header="EMPRESA" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="BtnExcluirClientes"
+                    Grid.Column="1"
+                    Margin="10"
+                    Click="BtnExcluirClientes_Click"
+                    Content="Excluir Clientes" />
+            <Button x:Name="BtnCadastrarClientes"
+                    Grid.Column="1"
+                    Margin="10"
+                    Click="BtnCadastrarClientes_Click"
+                    Content="Cadastrar Clientes" />
+        </Grid>
+    </Grid>
+</Window>
