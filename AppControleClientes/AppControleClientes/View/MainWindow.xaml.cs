@@ -24,5 +24,20 @@ namespace AppControleClientes
         {
             InitializeComponent();
         }
+
+        private void BtnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnExcluirClientes_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnCadastrarClientes_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
