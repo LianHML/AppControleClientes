@@ -32,7 +32,7 @@ namespace AppControleClientes
 
         private void BtnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            string connectionString = "Server=localhost;Port=5432;UserID=postgres;Password=H4t3b7p9;Database=postgre;";
+            string connectionString = "Server=localhost;Port=5432;UserId=postgres;Password=H4t3b7p9;Database=postgres;";
 
             using var connection = new NpgsqlConnection(connectionString);
 
