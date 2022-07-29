@@ -24,7 +24,7 @@ namespace AppControleClientes.View
 
         private void BtnVoltar_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
 
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
