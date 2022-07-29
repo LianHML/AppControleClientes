@@ -91,7 +91,8 @@ namespace AppControleClientes
 
         private void BtnCadastrarClientes_Click(object sender, RoutedEventArgs e)
         {
-            
+            var janelaCadastro = new CadastroClientes();
+            _ = janelaCadastro.ShowDialog();
         }
     }
 }
