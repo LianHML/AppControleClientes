@@ -26,5 +26,10 @@ namespace AppControleClientes.View
         {
 
         }
+
+        private void BtnSalvar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
