@@ -7,6 +7,7 @@
         Title="Cadastro de Clientes"
         Width="800"
         Height="450"
+        Style="{StaticResource MaterialDesignWindow}"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
     <Grid Margin="20">
@@ -25,7 +26,7 @@
                     Click="BtnVoltar_Click"
                     Content="Voltar" />
         </Grid>
-        <GroupBox Grid.Row="1" Header="Dados do Cliente">
+        <GroupBox Grid.Row="1" Header="Cadastro de Cliente">
             <Grid Margin="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
