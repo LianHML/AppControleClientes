@@ -86,7 +86,24 @@ namespace AppControleClientes
 
         private void BtnExcluirClientes_Click(object sender, RoutedEventArgs e)
         {
+            if (DtgClientes.SelectedItem is Cliente clienteSelecionado)
+            {
+                string delete = $"DELETE FROM clientes WHERE id = {clienteSelecionado.Id}";
+                var command = new NpgsqlCommand(delete);
+                string connectionString = "Server=localhost;Port=5432;UserId=postgres;Password=H4t3b7p9;Database=postgres;";
+                using var connection = new NpgsqlConnection(connectionString);
+                command.Connection = connection;
+                connection.Open();
+                int quantidadeDeLinhasAfetadas = command.ExecuteNonQuery();
+                if (quantidadeDeLinhasAfetadas > 0)
+                {
+                    BtnBuscar_Click(this, e);
+                }
+                else
+                {
 
+                }
+            }
         }
 
         private void BtnCadastrarClientes_Click(object sender, RoutedEventArgs e)
